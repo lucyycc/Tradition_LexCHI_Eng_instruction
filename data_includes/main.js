@@ -19,10 +19,10 @@ CheckPreloaded( startsWith("LexTale_trials") )
 ///// CALIBRATION TRIAL (measures audio latency)
 PennController("calibration",
     newText("calibInfo",
-        "我們正在校正您的電腦撥放音檔的延遲速度。請您戴上耳機。按下「開始校正」後，您會聽到一個提示音，播放完畢之後＂繼續＂鍵會出現。請您點選＂繼續＂開始接下來的測驗。"
+        "We are calibrating for potential audio latency. Please use your headphones and press the “Start Calibration” button. You will hear some sounds, and once the sound is played, the “Continue” button will appear. You can then click “Continue” to proceed to the next page."
     ).print(),
 
-    newButton("StartCalibration", "開始校正")
+    newButton("StartCalibration", "Start Calibration")
         .print()
         .center()
         .wait(),
@@ -47,7 +47,7 @@ PennController("calibration",
         v => getVar("audioStartTime").value - getVar("playRequestTime").value
     ),
 
-    newButton("Continue", "繼續")
+    newButton("Continue", "Continue")
         .print()
         .center()
         .wait()
@@ -73,7 +73,7 @@ PennController("LexTale_instructions",
         .center()
         .print(),
 
-    newButton("Start", "開始測驗")
+    newButton("Start", "Start the test")
         .center()
         .print()
         .wait(),
@@ -108,13 +108,13 @@ Template("stimuli.csv", row =>
             .play(),
 
         // Choice labels
-        newText("no", "不是中文語詞")
+        newText("no", "NOT a Mandarin word")
             .css("font-size", "40px")
             .css("font-family", "Avenir")
             .color("red")
             .bold(),
 
-        newText("yes", "是中文語詞")
+        newText("yes", "A Mandarin word")
             .css("font-size", "40px")
             .css("font-family", "Avenir")
             .color("green")
@@ -171,7 +171,7 @@ Template("stimuli.csv", row =>
 PennController("closing",
     newText("thanks", "<p>Thank you for participating!</p>")
         .print(),
-    newButton("Finish", "結束")
+    newButton("Finish", "This is end of the test")
         .print()
         .wait()
 );
