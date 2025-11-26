@@ -1,4 +1,4 @@
-# PCIbex Tranditional Mandarin LexCHI
+# PCIbex Tranditional Mandarin LexCHI with English instructions for Mandarin heritage speakers
 
 PCIbex implementation of Traditional Mandarin LexCHI materials adapted from Wen et al. (2024)
 
